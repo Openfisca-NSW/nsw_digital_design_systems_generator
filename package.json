@@ -1,0 +1,30 @@
+{
+  "name": "nsw_digital_design_systems_generator",
+  "version": "1.0.0",
+  "description": "test json for nsw digital design systems generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Openfisca-NSW/nsw_digital_design_systems_generator.git"
+  },
+  "keywords": [
+    "openfisca",
+    "rules",
+    "as",
+    "code",
+    "smart",
+    "legislation"
+  ],
+  "author": "Liam McCann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Openfisca-NSW/nsw_digital_design_systems_generator/issues"
+  },
+  "homepage": "https://github.com/Openfisca-NSW/nsw_digital_design_systems_generator#readme",
+  "dependencies": {
+    "nsw-design-system": "^2.3.0"
+  }
+}

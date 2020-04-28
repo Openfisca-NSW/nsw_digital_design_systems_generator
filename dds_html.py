@@ -59,7 +59,7 @@ def header(label, uniqueName, uniqueID, helperText=None):
                 </header>
 
                 """)
-        return html.safe_substitute(label=label, uniqueID=uniqueID, uniqueName=uniqueName, helperForm=helperForm)
+    return html.safe_substitute(label=label, uniqueID=uniqueID, uniqueName=uniqueName, helperForm=helperForm)
 
 
 

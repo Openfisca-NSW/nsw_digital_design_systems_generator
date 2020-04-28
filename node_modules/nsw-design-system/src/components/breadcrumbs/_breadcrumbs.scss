@@ -1,0 +1,72 @@
+.nsw-breadcrumb {
+  @include font-stack;
+  @include font-size('xs');
+  @include nsw-spacing(margin-top, lg);
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: none;
+
+    & + &::before {
+      content: '';
+      display: inline-block;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      width: rem(6px);
+      height: rem(6px);
+      transform: rotate(-45deg);
+      margin-right: rem(16px);
+      margin-left: rem(4px);
+      top: -1px;
+      position: relative;
+    }
+
+    @include breakpoint('md') {
+      display: inline;
+    }
+  }
+
+  &__item:nth-last-child(2),
+  &__item:last-child {
+    display: inline;
+  }
+
+  &__item:nth-last-child(2) {
+    &::before {
+      display: none;
+
+      @include breakpoint('md') {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__link {
+    color: $nsw-primary-blue;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+
+    &:hover {
+      @include nsw-hover;
+    }
+
+    &:focus {
+      @include nsw-focus($offset: false);
+    }
+
+    &:active {
+      @include nsw-active;
+    }
+  }
+
+  &--current {
+    text-decoration: none;
+    pointer-events: none;
+    color: $dark80;
+  }
+}
