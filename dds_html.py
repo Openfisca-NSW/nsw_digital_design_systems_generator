@@ -1,7 +1,7 @@
 from string import Template
 
 def header(label, uniqueName, uniqueID, helperText=None):
-
+    helperForm = helperTextElement(uniqueID, helperText)
     html = Template("""
             <div class="nsw-infobar">
                 <div class="nsw-container">
@@ -57,6 +57,7 @@ def header(label, uniqueName, uniqueID, helperText=None):
                       </div>
                     </div>
                 </header>
+
                 """)
         return html.safe_substitute(label=label, uniqueID=uniqueID, uniqueName=uniqueName, helperForm=helperForm)
 
@@ -102,7 +103,6 @@ def dropDown(optionList, label, uniqueName, uniqueID, helperText=None):
 
     """ )
     return html.safe_substitute(uniqueID=uniqueID, label=label, opt_str=opt_str, helperForm=helperForm)
-
 
 
 def singleCheckbox(label, uniqueName, uniqueID, helperText=None):
@@ -178,7 +178,7 @@ def radioList(optionList, groupLabel, uniqueName, uniqueID, helperText=None):
     return html.safe_substitute(uniqueID=uniqueID, groupLabel=groupLabel, opt_str=opt_str, helperForm=helperForm)
 
 
-def header(label, uniqueName, uniqueID, helperText=None):
+def footer(label, uniqueName, uniqueID, helperText=None):
     helperForm = helperTextElement(uniqueID, helperText)
     html = Template("""
         <footer class="nsw-footer">
